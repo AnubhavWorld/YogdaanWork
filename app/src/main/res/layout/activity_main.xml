@@ -120,6 +120,7 @@
                         android:layout_height="match_parent"
                         android:background="@drawable/corners"
                         app:cardBackgroundColor="#292d31"
+
                         app:cardCornerRadius="8dp"
 
                         >
@@ -154,7 +155,7 @@
                        >
 
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/a1"
+                            android:id="@+id/help"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/corners"

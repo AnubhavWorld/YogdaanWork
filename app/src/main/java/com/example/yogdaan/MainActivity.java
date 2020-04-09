@@ -45,15 +45,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,VolunteerActivity.class));
-                Toast.makeText(MainActivity.this, "Welcome to my favorite place!", Toast.LENGTH_SHORT).show();
+
             }
         });
 
-        CardView v4= findViewById(R.id.a1);
+        CardView v4= findViewById(R.id.help);
         v4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Hold my beer", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this,HelpActivity.class));
             }
         });
 
