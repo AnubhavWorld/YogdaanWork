@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VolunteerActivity"></activity>
+        <activity android:name=".donateFoodActivity"></activity>
+        <activity android:name=".donateClothesActivity" />
+        <activity android:name=".VolunteerActivity" />
         <activity android:name=".paymentActivity" />
         <activity android:name=".donationActivity" />
         <activity android:name=".SignupActivity" />
