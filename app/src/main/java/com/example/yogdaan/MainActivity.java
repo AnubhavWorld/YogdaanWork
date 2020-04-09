@@ -9,7 +9,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -41,10 +40,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        CardView v3= findViewById(R.id.i3);
+        CardView v3= findViewById(R.id.volunteer);
         v3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,VolunteerActivity.class));
                 Toast.makeText(MainActivity.this, "Welcome to my favorite place!", Toast.LENGTH_SHORT).show();
             }
         });

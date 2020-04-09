@@ -115,7 +115,7 @@
 
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/i3"
+                        android:id="@+id/volunteer"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@drawable/corners"
