@@ -63,7 +63,7 @@
                         >
 
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/i1"
+                            android:id="@+id/logout"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             app:cardBackgroundColor="#292d31"
