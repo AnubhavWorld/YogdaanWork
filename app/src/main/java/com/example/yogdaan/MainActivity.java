@@ -16,18 +16,25 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
     DrawerLayout d;
     Toolbar t;
     private FirebaseAuth mAuth;
+    private FirebaseFirestore ff;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
+        ff=FirebaseFirestore.getInstance();
         setuptoolbarnow();
         CardView v1= findViewById(R.id.logout);
         v1.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Have a cup of coffee,bud!", Toast.LENGTH_SHORT).show();
+                Map<String,Object> map=new HashMap<>();
+                map.put("date",new Date());
+                ff.collection("Posts").add(map);
             }
         });
 
