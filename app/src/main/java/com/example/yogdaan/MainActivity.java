@@ -21,6 +21,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,7 +55,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Have a cup of coffee,bud!", Toast.LENGTH_SHORT).show();
                 Map<String,Object> map=new HashMap<>();
                 map.put("date",new Date());
-                ff.collection("Posts").add(map);
+                Random r=new Random();
+                final int randomid=r.nextInt(1000000+1);
+                ff.collection("Username").document(mAuth.getCurrentUser().getUid()).collection("Transaction").document(String.valueOf(randomid)).set(map);
             }
         });
 
