@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,7 @@ public class HelpActivity extends AppCompatActivity {
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(HelpActivity.this,HelpPage.class));
                 Toast.makeText(HelpActivity.this, "Help Yourselves", Toast.LENGTH_SHORT).show();
             }
         });
