@@ -226,6 +226,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="#04a87d"
+        android:id="@+id/nav"
         app:headerLayout="@layout/h"
         app:menu="@menu/m">
 

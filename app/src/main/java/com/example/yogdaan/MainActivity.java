@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -93,14 +94,37 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "HELLO", Toast.LENGTH_SHORT).show();
             }
         });
+        NavigationView navigationView= findViewById(R.id.nav);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.logout: mAuth.signOut(); startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                    break;
+                    case R.id.z2:
+                        Toast.makeText(MainActivity.this,"MENU 2",Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.volunteer:
+                        Toast.makeText(MainActivity.this,"MENU 3",Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.z4:
+                        Toast.makeText(MainActivity.this,"MENU 4",Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.z5:
+                        Toast.makeText(MainActivity.this,"MENU 5",Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.z6:
+                        Toast.makeText(MainActivity.this,"MENU 6",Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.z7:
+                        Toast.makeText(MainActivity.this,"MENU 7",Toast.LENGTH_SHORT).show();
+                        break;
 
+                }
 
-
-
-
-
-
-
+                return false;
+            }
+        });
 
     }
 
@@ -112,25 +136,9 @@ public class MainActivity extends AppCompatActivity {
         d.addDrawerListener(ac);
         ac.syncState();
 
-
-
-
     }
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.m,menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch(item.getItemId()){
-            case R.id.logout: mAuth.signOut();
-                startActivity(new Intent(MainActivity.this,LoginActivity.class));
-                return true;
 
-        }
-        return false;
-    }
-    @Override
+
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
@@ -139,6 +147,5 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this,LoginActivity.class));
         }
     }
-
 
 }
