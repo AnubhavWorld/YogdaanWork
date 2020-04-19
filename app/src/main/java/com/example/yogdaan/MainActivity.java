@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         v4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,HelpActivity.class));
+                startActivity(new Intent(MainActivity.this,HelpPage.class));
             }
         });
 

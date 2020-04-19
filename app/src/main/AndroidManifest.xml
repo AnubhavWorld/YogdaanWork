@@ -10,10 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".HelpPage"></activity>
-        <activity
-            android:name=".HelpActivity"
-            android:label=""
-            android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".donateFoodActivity" />
         <activity android:name=".donateClothesActivity" />
         <activity android:name=".VolunteerActivity" />
@@ -28,6 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".HelpPage$HelpPage" />
     </application>
 
 </manifest>
