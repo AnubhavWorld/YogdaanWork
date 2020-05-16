@@ -40,7 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                auth.signInWithEmailAndPassword(username_text.getText().toString()+"@gmail.com",password_text.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                auth.signInWithEmailAndPassword(username_text.getText().toString(),password_text.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
